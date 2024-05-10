@@ -7,7 +7,7 @@
     <title>{{ title }}</title>
     <link rel="stylesheet" href="{% static 'myapp/css/styles.css' %}">
 </head>
-<body>
+<body class='bg-sky-500'>
     <h1>Phone list price</h1>
     {% for item in items %}
         <p>{{ item.pk }}</p>
