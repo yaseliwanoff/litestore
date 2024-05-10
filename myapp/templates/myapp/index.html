@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="{% static 'myapp/css/styles.css' %}">
+</head>
+<body>
+    <h1>Phone list price</h1>
+    {% for item in items %}
+        <p>{{ item.pk }}</p>
+        <a href="{% url 'myapp:detail' item.id %}"><h3>{{ item.name }}</h3></a>
+        <p>{{ item.description }}</p> <p>${{ item.price }}</p>
+        <hr>
+    {% endfor %}
+</body>
+</html>
