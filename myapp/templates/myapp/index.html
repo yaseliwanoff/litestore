@@ -2,27 +2,8 @@
 {% load static %}
 
 {% block content %}
-<nav class='bg-white shadow-lg'>
-    <div class='max-w-6x1 mx-auto px-4'>
-        <div class='flex justify-between'>
-            <div class='flex space-x-7'>
-                <div>
-                    <a href="#" class='flex items-center px-2 py-4'>
-                        <img class='h-8 w-8' src="{% static 'myapp/images/logo.svg' %}" alt="logo">
-                        <span class='text-gray-500 text-xl font-bold'>LiteShop</span>
-                    </a>
-                </div>
-                <div class='items-center flex space-x-1'>
-                    <a href="#" class='py-4 px-2 text-gray-500 font-semibold border-b-2 border-green-500'>Home</a>
-                    <a href="#" class='py-4 px-2 text-gray-500 font-semibold'>About</a>
-                    <a href="#" class='py-4 px-2 text-gray-500 font-semibold'>Contacts</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</nav>
 {% for item in items %}
-    <p>{{ item.pk }}</p>
+    <img src="{{ item.image.url }}" alt="phone image">
     <a href="{% url 'myapp:detail' item.id %}"><h3>{{ item.name }}</h3></a>
     <p>{{ item.description }}</p> <p>${{ item.price }}</p>
     <hr>
