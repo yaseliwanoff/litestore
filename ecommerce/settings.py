@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.humanize',
 
     'myapp',
+    'users',
 ]
 
 MIDDLEWARE = [
@@ -127,3 +128,13 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 MEDIA_ROOT = BASE_DIR / 'media'
 MEDIA_URL = '/media/'
+
+
+
+LOGIN_REDIRECT_URL = 'myapp:homepage'
+LOGIN_URL = 'myapp:login'
+LOGOUT_REDIRECT_URL = 'myapp:homepage'
+
+
+STRIPE_PUBLISHABLE_KEY = 'pk_test_51PJwPnKOGt4uM0TpLsFN6vZ60MKujeMTLZOwestmn6ofrOPMJMNzpknu80JRY80hHETWEL3H5Sq4fNbTvDebx2le008uAzuOgy'
+STRIPE_SECRET_KEY = 'pk_test_51PJwPnKOGt4uM0TpLsFN6vZ60MKujeMTLZOwestmn6ofrOPMJMNzpknu80JRY80hHETWEL3H5Sq4fNbTvDebx2le008uAzuOgy'
